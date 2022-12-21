@@ -86,18 +86,14 @@ function productCounter() {
 }
 function addToCart(e) {
     const product = e.target.getAttribute("data-product");
-    //console.log(product);
     cartArray.push(product);
-    //console.log(cartArray);
     productCounter();
 }
 function addEventToCartButtons() {
     const buttons = document.querySelectorAll(".cart-btn");
-    //console.log(buttons);
     for (let i = 0; i < buttons.length; i++) {
         const button = buttons[i];
         button.addEventListener("click", addToCart);
-        console.log(button);
     }
     /*const button = buttons.forEach(item => {
         item.addEventListener("click", addToCart);
